@@ -1,460 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adnan - Full Stack Developer</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background-color: #0d1117;
-            color: #ffffff;
-            font-family: 'Orbitron', sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .container {
-            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 0 30px rgba(0, 255, 221, 0.2), 0 0 60px rgba(255, 0, 255, 0.1);
-            border: 1px solid #30363d;
-        }
-        
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 20px;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin: 20px 0;
-            color: #00FFDD;
-            text-shadow: 0 0 10px #00FFDD, 0 0 20px #FF00FF;
-        }
-        
-        h2 {
-            font-size: 1.8rem;
-            margin: 30px 0 20px;
-            color: #00FFDD;
-            text-shadow: 0 0 5px #00FFDD;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #FF00FF;
-        }
-        
-        h3 {
-            font-size: 1.4rem;
-            margin: 20px 0 15px;
-            color: #FF00FF;
-        }
-        
-        p {
-            margin: 15px 0;
-            color: #ffffff;
-        }
-        
-        .badges {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px 0;
-        }
-        
-        .badge {
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            transition: transform 0.3s, box-shadow 0.3s;
-            color: #ffffff;
-        }
-        
-        .badge:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 255, 221, 0.4);
-        }
-        
-        .divider {
-            height: 3px;
-            background: linear-gradient(90deg, #00FFDD, #FF00FF);
-            margin: 40px 0;
-            border-radius: 3px;
-        }
-        
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-        
-        .tech-category {
-            background: rgba(22, 27, 34, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #30363d;
-            box-shadow: 0 0 15px rgba(0, 255, 221, 0.1);
-        }
-        
-        .tech-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        
-        .tech-item {
-            background: rgba(0, 255, 221, 0.1);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #ffffff;
-            border: 1px solid rgba(0, 255, 221, 0.3);
-        }
-        
-        .stats {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin: 30px 0;
-        }
-        
-        .stat-item {
-            flex: 1;
-            min-width: 280px;
-            background: rgba(22, 27, 34, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            border: 1px solid #30363d;
-            box-shadow: 0 0 15px rgba(255, 0, 255, 0.1);
-        }
-        
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-        
-        .project {
-            background: rgba(22, 27, 34, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #30363d;
-            box-shadow: 0 0 15px rgba(0, 255, 221, 0.1);
-            transition: transform 0.3s;
-        }
-        
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
-        }
-        
-        .project-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .project-link {
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-            color: #ffffff;
-        }
-        
-        .repo-link {
-            background: rgba(0, 255, 221, 0.2);
-            border: 1px solid #00FFDD;
-        }
-        
-        .demo-link {
-            background: rgba(255, 0, 255, 0.2);
-            border: 1px solid #FF00FF;
-        }
-        
-        .project-link:hover {
-            opacity: 0.8;
-            transform: scale(1.05);
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 30px 0;
-        }
-        
-        .social-link {
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s;
-            color: #ffffff;
-        }
-        
-        .quote {
-            text-align: center;
-            font-style: italic;
-            margin: 40px 0;
-            padding: 20px;
-            border-radius: 10px;
-            background: rgba(22, 27, 34, 0.8);
-            border: 1px solid #30363d;
-            box-shadow: 0 0 15px rgba(0, 255, 221, 0.1);
-            color: #ffffff;
-        }
-        
-        .glow-text {
-            text-shadow: 0 0 10px #00FFDD, 0 0 20px #FF00FF;
-        }
-        
-        @media (max-width: 768px) {
-            .tech-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                flex-direction: column;
-            }
-            
-            .projects {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>👋 Assalamualaikum! I'm Adnan</h1>
-            <p class="glow-text">A Passionate Full-Stack Developer from Bangladesh</p>
-            
-            <div class="badges">
-                <a href="https://github.com/Adnan123456a?tab=followers" class="badge" style="background: #1A1A1A; border: 1px solid #00FFDD;">
-                    Followers: 100+
-                </a>
-                <a href="https://github.com/Adnan123456a" class="badge" style="background: #1A1A1A; border: 1px solid #FF00FF;">
-                    Stars: 50+
-                </a>
-                <a href="https://visitor-badge.laobi.icu/badge?page_id=adnan123456a.adnan123456a" class="badge" style="background: #1A1A1A; border: 1px solid #00FFDD;">
-                    Visitors: 500+
-                </a>
-            </div>
-        </header>
-        
-        <div class="divider"></div>
-        
-        <section>
-            <h2>🌌 Tech Stack</h2>
-            
-            <div class="tech-grid">
-                <div class="tech-category">
-                    <h3>🚀 Languages</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">JavaScript</span>
-                        <span class="tech-item">TypeScript</span>
-                        <span class="tech-item">Python</span>
-                        <span class="tech-item">C</span>
-                        <span class="tech-item">Bash</span>
-                        <span class="tech-item">HTML5</span>
-                        <span class="tech-item">CSS3</span>
-                    </div>
-                </div>
-                
-                <div class="tech-category">
-                    <h3>⚡ Frontend</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">React</span>
-                        <span class="tech-item">Next.js</span>
-                        <span class="tech-item">Tailwind CSS</span>
-                        <span class="tech-item">Bootstrap</span>
-                    </div>
-                </div>
-                
-                <div class="tech-category">
-                    <h3>🔥 Backend</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">Node.js</span>
-                        <span class="tech-item">Express.js</span>
-                        <span class="tech-item">NestJS</span>
-                        <span class="tech-item">FastAPI</span>
-                    </div>
-                </div>
-                
-                <div class="tech-category">
-                    <h3>🗄️ Databases</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">MongoDB</span>
-                        <span class="tech-item">MySQL</span>
-                        <span class="tech-item">PostgreSQL</span>
-                        <span class="tech-item">Redis</span>
-                    </div>
-                </div>
-                
-                <div class="tech-category">
-                    <h3>🛠️ Tools & Tech</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">Docker</span>
-                        <span class="tech-item">NGINX</span>
-                        <span class="tech-item">PM2</span>
-                        <span class="tech-item">Postman</span>
-                        <span class="tech-item">JWT</span>
-                    </div>
-                </div>
-                
-                <div class="tech-category">
-                    <h3>☁️ DevOps & Cloud</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">GitHub</span>
-                        <span class="tech-item">GitLab</span>
-                        <span class="tech-item">Render</span>
-                        <span class="tech-item">Netlify</span>
-                        <span class="tech-item">Vercel</span>
-                        <span class="tech-item">Git</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section>
-            <h2>📊 GitHub Stats</h2>
-            
-            <div class="stats">
-                <div class="stat-item">
-                    <h3>GitHub Stats</h3>
-                    <p>Repositories: 20+</p>
-                    <p>Contributions: 500+</p>
-                    <p>Commits: 1000+</p>
-                </div>
-                
-                <div class="stat-item">
-                    <h3>Streak Stats</h3>
-                    <p>Current Streak: 15 days</p>
-                    <p>Longest Streak: 60 days</p>
-                    <p>Total Contributions: 800+</p>
-                </div>
-                
-                <div class="stat-item">
-                    <h3>Top Languages</h3>
-                    <p>JavaScript: 45%</p>
-                    <p>Python: 25%</p>
-                    <p>HTML/CSS: 15%</p>
-                    <p>Others: 15%</p>
-                </div>
-            </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section>
-            <h2>🚀 Featured Projects</h2>
-            
-            <div class="projects">
-                <div class="project">
-                    <h3>AniPub - Anime Publishing Platform</h3>
-                    <p>A full-stack anime publishing platform with user authentication, content management, and responsive design.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/AnimePub" class="project-link repo-link">Repository</a>
-                        <a href="https://anipub.adnandluffy.com/" class="project-link demo-link">Live Demo</a>
-                    </div>
-                </div>
-                
-                <div class="project">
-                    <h3>MDA Server</h3>
-                    <p>A powerful server implementation with RESTful APIs, database integration, and authentication systems.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/AdnanDLuffy/MDA-Server" class="project-link repo-link">Repository</a>
-                    </div>
-                </div>
-                
-                <div class="project">
-                    <h3>SMTPulse - Email Service</h3>
-                    <p>An email service solution with SMTP integration, template management, and analytics.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/Adnan-D-Luffy/smtpulse" class="project-link repo-link">Repository</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section>
-            <h2>📡 Connect With Me</h2>
-            
-            <div class="social-links">
-                <a href="https://www.facebook.com/WallaHabibi.Adnan" class="social-link" style="background: #1877F2;">
-                    Facebook
-                </a>
-                <a href="https://www.instagram.com/adnand.luffy" class="social-link" style="background: #E4405F;">
-                    Instagram
-                </a>
-                <a href="https://github.com/adnan123456a" class="social-link" style="background: #6e5494;">
-                    GitHub
-                </a>
-                <a href="mailto:youremail@example.com" class="social-link" style="background: #EA4335;">
-                    Email
-                </a>
-            </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <div class="quote">
-            <p class="glow-text">💡 "Code the future, one commit at a time!"</p>
-        </div>
-    </div>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=40&duration=3000&pause=500&color=00FFDD&center=true&vCenter=true&width=600&lines=👋+Assalamualaikum!+I'm+Adnan" alt="Typing SVG" />
+</p>
+<h1 align="center" style="font-family: 'Orbitron', sans-serif; color: #00FFDD; text-shadow: 0 0 10px #00FFDD, 0 0 20px #FF00FF;">A Passionate Full-Stack Developer from Bangladesh</h1>
 
-    <script>
-        // Simple animation for tech items
-        document.addEventListener('DOMContentLoaded', function() {
-            const techItems = document.querySelectorAll('.tech-item');
-            techItems.forEach((item, index) => {
-                item.style.animationDelay = `${index * 0.1}s`;
-                item.classList.add('fade-in');
-            });
-            
-            // Add animation for project cards
-            const projects = document.querySelectorAll('.project');
-            projects.forEach((project, index) => {
-                project.style.animationDelay = `${index * 0.2}s`;
-                project.classList.add('fade-in-up');
-            });
-        });
-    </script>
-</body>
-</html>
+<p align="center">
+  <a href="https://github.com/Adnan123456a?tab=followers">
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/adnan123456a?color=00FFDD&style=plastic&logo=github&labelColor=1A1A1A&borderColor=FF00FF">
+  </a>
+  <a href="https://github.com/Adnan123456a">
+    <img alt="GitHub User's stars" src="https://img.shields.io/github/stars/adnan123456a?color=FF00FF&style=plastic&logo=github&labelColor=1A1A1A&borderColor=00FFDD">
+  </a>
+  <a href="https://visitor-badge.laobi.icu/badge?page_id=adnan123456a.adnan123456a">
+    <img alt="Visitors" src="https://visitor-badge.laobi.icu/badge?page_id=adnan123456a.adnan123456a&color=FF00FF&style=plastic&labelColor=1A1A1A&borderColor=00FFDD">
+  </a>
+</p>
+
+---
+
+## 🌌 Tech Stack
+
+### Languages
+<p align="center">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=plastic&logo=javascript&logoColor=black&borderColor=00FFDD&color=1A1A1A" alt="JavaScript" style="box-shadow: 0 0 10px #F7DF1E;">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=plastic&logo=python&logoColor=white&borderColor=FF00FF&color=1A1A1A" alt="Python" style="box-shadow: 0 0 10px #3776AB;">
+  <img src="https://img.shields.io/badge/C-00599C?style=plastic&logo=c&logoColor=white&borderColor=00FFDD&color=1A1A1A" alt="C" style="box-shadow: 0 0 10px #00599C;">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white&borderColor=FF00FF&color=1A1A1A" alt="HTML5" style="box-shadow: 0 0 10px #E34F26;">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=plastic&logo=css3&logoColor=white&borderColor=00FFDD&color=1A1A1A" alt="CSS3" style="box-shadow: 0 0 10px #1572B6;">
+</p>
+
+### Frameworks & Libraries
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=plastic&logo=nodedotjs&logoColor=white&borderColor=00FFDD&color=1A1A1A" alt="Node.js" style="box-shadow: 0 0 10px #339933;">
+  <img src="https://img.shields.io/badge/Express.js-000000?style=plastic&logo=express&logoColor=white&borderColor=FF00FF&color=1A1A1A" alt="Express.js" style="box-shadow: 0 0 10px #FFFFFF;">
+</p>
+
+### Databases
+<p align="center">
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=plastic&logo=mongodb&logoColor=white&borderColor=00FFDD&color=1A1A1A" alt="MongoDB" style="box-shadow: 0 0 10px #47A248;">
+</p>
+
+### DevOps & Cloud
+<p align="center">
+  <img src="https://img.shields.io/badge/GitHub-100000?style=plastic&logo=github&logoColor=white&borderColor=FF00FF&color=1A1A1A" alt="GitHub" style="box-shadow: 0 0 10px #FFFFFF;">
+  <img src="https://img.shields.io/badge/Render-46E3B7?style=plastic&logo=render&logoColor=white&borderColor=00FFDD&color=1A1A1A" alt="Render" style="box-shadow: 0 0 10px #46E3B7;">
+  <img src="https://img.shields.io/badge/Git-F05032?style=plastic&logo=git&logoColor=white&borderColor=FF00FF&color=1A1A1A" alt="Git" style="box-shadow: 0 0 10px #F05032;">
+</p>
+
+---
+
+## 📈 GitHub Stats
+
+<p align="center">
+  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=adnan123456a&show_icons=true&theme=transparent&hide_border=true&bg_color=1A1A1A&title_color=00FFDD&text_color=FFFFFF&icon_color=FF00FF" alt="GitHub Stats" style="box-shadow: 0 0 15px #00FFDD;">
+  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=adnan123456a&theme=transparent&hide_border=true&background=1A1A1A&stroke=FF00FF&ring=00FFDD&fire=FF00FF&currStreakLabel=00FFDD&sideLabels=FFFFFF" alt="GitHub Streak" style="box-shadow: 0 0 15px #FF00FF;">
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adnan123456a&layout=compact&theme=transparent&hide_border=true&bg_color=1A1A1A&title_color=00FFDD&text_color=FFFFFF" alt="Top Languages" style="box-shadow: 0 0 15px #00FFDD;">
+</p>
+
+---
+
+## 🏆 Achievements
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=adnan123456a&theme=onedark&column=7&margin-w=15&margin-h=15&no-frame=true&no-bg=true" alt="Trophies" style="box-shadow: 0 0 20px #FF00FF;">
+</p>
+
+---
+
+## 🚀 Featured Projects
+
+### 🌟 AniPub - Anime Publishing Platform
+<p align="center">
+  <a href="https://github.com/AnimePub">
+    <img src="https://img.shields.io/badge/Repo-100000?style=plastic&logo=github&logoColor=white&borderColor=00FFDD&color=1A1A1A" alt="Repo">
+  </a>
+  <a href="https://anipub.adnandluffy.com/">
+    <img src="https://img.shields.io/badge/Live_Demo-0CCE6B?style=plastic&logo=render&logoColor=white&borderColor=FF00FF&color=1A1A1A" alt="Live Demo">
+  </a>
+</p>
+
+### 🌟 MDA Server
+<p align="center">
+  <a href="https://github.com/AdnanDLuffy/MDA-Server">
+    <img src="https://img.shields.io/badge/Repo-100000?style=plastic&logo=github&logoColor=white&borderColor=00FFDD&color=1A1A1A" alt="Repo">
+  </a>
+</p>
+
+### 🌟 SMTPulse - Email Service
+<p align="center">
+  <a href="https://github.com/Adnan-D-Luffy/smtpulse">
+    <img src="https://img.shields.io/badge/Repo-100000?style=plastic&logo=github&logoColor=white&borderColor=00FFDD&color=1A1A1A" alt="Repo">
+  </a>
+</p>
+
+---
+
+## 🎮 Fun Section
+
+<p align="center">
+  <img src="https://github.com/adnan123456a/adnan123456a/blob/output/github-contribution-grid-snake.svg" alt="Snake animation" style="filter: drop-shadow(0 0 10px #00FFDD);">
+</p>
+
+---
+
+## 📡 Connect With Me
+
+<p align="center">
+  <a href="https://www.facebook.com/WallaHabibi.Adnan">
+    <img src="https://img.shields.io/badge/Facebook-1877F2?style=plastic&logo=facebook&logoColor=white&borderColor=00FFDD&color=1A1A1A" alt="Facebook" style="box-shadow: 0 0 10px #1877F2;">
+  </a>
+  <a href="https://www.instagram.com/adnand.luffy">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=plastic&logo=instagram&logoColor=white&borderColor=FF00FF&color=1A1A1A" alt="Instagram" style="box-shadow: 0 0 10px #E4405F;">
+  </a>
+  <a href="https://github.com/adnan123456a">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=plastic&logo=github&logoColor=white&borderColor=00FFDD&color=1A1A1A" alt="GitHub" style="box-shadow: 0 0 10px #FFFFFF;">
+  </a>
+</p>
+
+---
+
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=transparent&border_color=00FFDD&bg_color=1A1A1A&quote_color=FFFFFF" alt="Random Quotes" style="box-shadow: 0 0 15px #FF00FF;">
+</p>
+
+<p align="center" style="font-family: 'Orbitron', sans-serif; color: #00FFDD; text-shadow: 0 0 10px #00FFDD;">
+  <i>💡 "Code the future, one commit at a time!"</i>
+</p>
+ make it advanced and .. add a skill stack .. Bash .. Don't add other irrevalent things ! Make it cool cooler for README.md
