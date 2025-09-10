@@ -50,8 +50,12 @@
 
 ## 📈 GitHub Stats
 
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=adnan123456a&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=adnan123456a&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="150" alt="languages graph"  />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=adnan123456a&radius=16&theme=dracula&area=true&order=5" height="300" alt="activity-graph graph"  />
+</div>
 <p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=adnan123456a&show_icons=true&theme=transparent&hide_border=true&bg_color=1A1A1A&title_color=00FFDD&text_color=FFFFFF&icon_color=FF00FF" alt="GitHub Stats" style="box-shadow: 0 0 15px #00FFDD;">
   <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=adnan123456a&theme=transparent&hide_border=true&background=1A1A1A&stroke=FF00FF&ring=00FFDD&fire=FF00FF&currStreakLabel=00FFDD&sideLabels=FFFFFF" alt="GitHub Streak" style="box-shadow: 0 0 15px #FF00FF;">
 </p>
 
