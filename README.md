@@ -66,7 +66,7 @@
 ## 🏆 Achievements
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=adnan123456a&theme=onedark&column=7&margin-w=15&margin-h=15&no-frame=true&no-bg=true" alt="Trophies" style="box-shadow: 0 0 20px #FF00FF;">
+ <img src="https://github-profile-trophy.vercel.app?username=adnan123456a&theme=dracula&column=-1&row=1&margin-w=8&margin-h=8&no-bg=false&no-frame=false&order=4" height="150" alt="trophy graph"  />
 </p>
 
 ---
