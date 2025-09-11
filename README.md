@@ -42,11 +42,19 @@
 - **[SMTPulse](https://github.com/Adnan-D-Luffy/SMTPulse)**: Simple Mail Sender via SMTP
 
  ## 🌐 Connect with Me
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://facebook.com/yourusername)  
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/yourusername)  
-[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/yourusername)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourusername)  
-🚀 Fun Fact
+<p align="center">
+  <a href="https://www.facebook.com/AdnanDLuffy.atomic" target="_blank">
+    <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
+  </a>
+  <a href="https://www.instagram.com/adnand.luffy" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+  </a>
+  <a href="https://github.com/Adnan-D-Luffy" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" />
+  </a>
+</p>
+
+## 🚀 Fun Fact
 I dream of hacking NASA's systems (ethically, of course) to send Tux the Penguin to the moon! 🐧🌙  
 
-⭐️ From adnan123456a | Powered by Linux & Cosmic Curiosity
+
