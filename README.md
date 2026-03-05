@@ -4,10 +4,6 @@
        alt="Minimal black & white coding animation" />
 </p>
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=300&color=black&text=Assalamualaikum&textBg=false" alt="header" />
-</p>
-
 <h1 align="center">Abdullah Al Adnan</h1>
 
 <p align="center">
