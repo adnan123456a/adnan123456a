@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=slice&color=000000,111111&height=120&section=header&text=Abdullah%20Al%20Adnan&fontSize=38&fontColor=ffffff&fontAlignY=70&animation=twinkling&fontWeight=bold" alt="header" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=300&color=black&text=Assalamualaikum&textBg=false" alt="header" />
 </p>
 
 <h1 align="center">Abdullah Al Adnan</h1>
